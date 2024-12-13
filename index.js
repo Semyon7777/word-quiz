@@ -2,10 +2,15 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
-const saltRounds = 10;
+const saltRounds = parseInt(process.env.SALT_ROUNDS) || 10;
+
+
 
 const db = new pg.Client({
     connectionString: process.env.DATABASE_URL,
