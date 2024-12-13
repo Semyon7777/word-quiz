@@ -1,0 +1,357 @@
+html, body {
+    border: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(236, 246, 246);
+}
+
+.all-container {
+    width: 100%;
+    margin: 30px 30% 30px 30%;
+    background-color: rgb(15, 15, 142);
+    border-radius: 2rem;
+}
+
+.all-container h1 {
+    font-size: 80px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: brown;
+}
+
+.all-container h2 {
+    font-size: 50px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: brown;
+}
+
+.authorize-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    height: 40%;
+}
+
+.authorize-block button {
+    font-size: 130%;
+    width: 200px;
+    height: 70px;
+    box-shadow: none;
+    border-radius: 3rem;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button {
+    margin-top: -20px;
+    position: relative;
+    border-radius: 1rem;
+    top: 2.5%;
+    left: 45%;
+    height: 6%;
+}
+
+.go-back-button-quiz {
+    left: 48%;
+}
+
+button:hover {
+    background-color: #ddf6ff; /* Немного темнее зелёный при наведении */
+}
+
+.card-body {
+    height: 100%;
+}
+
+.card-body form {
+    display: flex;
+    gap: 10px;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-body form label {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-body form .form-control {
+    font-size: 120%;
+    border-radius: 1rem;
+    width: 50%;
+    height: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
+
+.card-body form .form-submit {
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    height: 50px;
+    width: 30%;
+}
+
+.quiz-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(166, 237, 237);
+}
+
+.card-add-block {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid black;
+}
+
+.card-add-block form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.card-add-block form input {
+    padding-left: 20px;
+    height: 40px;
+    width: 20%;
+    border: 1px solid rgb(134, 164, 241);
+    outline: none; /* Убираем рамку при фокусе */
+}
+
+.card-add-block form input:focus {
+    border-color: #0059b7; /* Цвет рамки при фокусе */
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5); /* Лёгкое свечение */
+}
+
+.card-add-block .card-title {
+    border-top-left-radius: 1rem;
+}
+
+.card-add-block form .submit-block {
+    margin-top: 5px;
+    margin-right: -8%;
+}
+
+.card-add-block form .submit-block button {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(51, 47, 47);
+    background-color: rgb(77, 135, 250);
+    border: 1px solid rgb(96, 106, 240);
+    border-radius: 0.5rem;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.card-add-block form .submit-block button:hover {
+    background-color: rgba(20, 119, 181, 0.641);
+}
+
+
+.quiz-container h1 {
+    margin-top: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.submit-block {
+    margin-left: 10%;
+}
+
+.cards-list-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 63vh;
+    width: 100%;
+}
+
+
+.scrollable-block {
+    border-radius: 2rem;
+    width: 30%; /* фиксированная ширина */
+    height: 100%; /* фиксированная высота */
+    border: 10px solid #171257; /* рамка для визуализации */
+    overflow: auto; /* включение прокрутки */
+    padding: 10px; /* внутренний отступ */
+    scrollbar-width: none; /* Для Firefox: тонкая полоса прокрутки */
+    scrollbar-color: #888 #f1f1f100; /* Цвета для Firefox */
+}
+  
+  /* Для WebKit-браузеров (Chrome, Safari, Edge) */
+  .scrollable-block::-webkit-scrollbar {
+    width: 10px; /* Ширина полосы прокрутки */
+  }
+  
+  .scrollable-block::-webkit-scrollbar-button {
+    display: none; /* Полностью скрывает стрелки */
+  }
+  
+  .scrollable-block::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Фон трека */
+  }
+  
+  .scrollable-block::-webkit-scrollbar-thumb {
+    background-color: #888; /* Цвет ползунка */
+    border-radius: 10px; /* Закруглённый ползунок */
+  }
+  
+  .scrollable-block::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Цвет ползунка при наведении */
+  }
+  
+
+
+.scrollable-block .card-element {
+    margin-left: 10%;
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 80%;
+    background-color: rgb(82, 164, 230);
+}
+
+.card-element .card-element-title,
+.card-element .card-element-description {
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Mobile specific styles */
+@media (max-width: 1000px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: rgb(236, 246, 246);
+    }
+
+    .all-container {
+        margin: 20px 5%;
+    }
+
+    .all-container h1, .all-container h2 {
+        font-size: 5rem; /* Reduced font size for mobile */
+        text-align: center;
+        color: brown;
+        margin-top: 5%;
+    }
+
+    .authorize-block {
+        margin-top: -50px;
+        padding-bottom: 70px;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+
+    .authorize-block button {
+        font-size: 120%;
+        width: none; /* Adjusted for mobile */
+        height: 60px;
+        border-radius: 3rem;
+    }
+
+    .go-back-button {
+        left: 40%;
+    }
+    .go-back-button-quiz {
+        left: 42%;
+    }
+
+    .card-body form .form-control {
+        width: 80%;  /* Adjusted for mobile */
+        margin-bottom: 20px;
+        height: 50px;
+        font-size: 110%;
+    }
+
+    .card-add-block form input {
+        width: 80%;  /* Adjusted for mobile */
+        padding-left: 20px;
+        height: 40px;
+        border: 1px solid rgb(134, 164, 241);
+    }
+
+    .card-add-block .card-title {
+        border-top-left-radius: 1rem;
+    }
+
+    .submit-block {
+        margin-left: 68%;
+    }
+
+    .card-add-block form .submit-block {
+        margin-top: 5px;
+        margin-right: -8%;
+    }
+
+    .card-add-block form .submit-block button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px; /* Smaller button for mobile */
+    }
+
+    .cards-list-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;  /* Adjusted for mobile */
+        width: 100%;
+    }
+
+    .scrollable-block {
+        width: 80%;  /* Adjusted for mobile */
+        height: 50vh;
+        border: 10px solid #171257;
+        overflow: auto;
+        padding: 10px;
+        scrollbar-width: none;
+        scrollbar-color: #888 #f1f1f100;
+    }
+
+    .scrollable-block .card-element {
+        margin-left: 10%;
+        display: flex;
+        margin-bottom: 10px;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 80%;
+        background-color: rgb(82, 164, 230);
+    }
+
+    .card-element .card-element-title,
+    .card-element .card-element-description {
+        font-size: 1rem; /* Adjusted font size for mobile */
+    }
+}

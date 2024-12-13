@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>FILL YOUR CARD</h1>
+        <div class="card-add-block">
+          <form action="/quiz-add" method="post">
+              <input type="text" name="card_title" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem;">
+              <input type="text" name="card_description" style="border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem;">
+              <input type="hidden" name="userId" value="<%= userId %>">
+              <div class="submit-block">
+                  <button type="submit">+</button>
+              </div>
+          </form>
+          <div class="cards-list-block">
+              <div class="scrollable-block">
+                  <% if (cards && cards.length > 0) { %>
+                    <% cards.forEach(card => { %>
+                      <div class="card-element">
+                        <div class="card-element-title"><%= card.title %></div>
+                        <div class="card-element-description"><%= card.description %></div>
+                      </div>
+                    <% }) %>
+                  <% } else { %>
+                    <p>Нет карточек для отображения.</p>
+                  <% } %>
+                </div>
+          </div>
+          <a href="/"><button class="go-back-button go-back-button-quiz">Log out</button></a>
+        </div>
+    </div>
+</body>
+</html>
