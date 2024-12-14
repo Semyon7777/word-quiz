@@ -13,7 +13,7 @@ const saltRounds = parseInt(process.env.SALT_ROUNDS) || 10;
 
 
 const db = new pg.Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: "postgresql://postgres:aOKvmieLsAnaRBevHQdgCMsRTEpPjwuZ@autorack.proxy.rlwy.net:45916/railway",
     ssl: {
         rejectUnauthorized: false // Для работы с защищенными соединениями
     }
